@@ -15,7 +15,7 @@ The template consists out of the following components:
 
 Introduction.tex provides examples of references, tables and figures. Figures should be placed in the ./figures folder. Title page logo's in the ./frontmatter. You can create additional sections by copying existing ones from the ./sections folder. However, in general it is better to stick the standard 5 sections structure. Including more frontmatter can be done by uncommenting lines in the main document. There are templates available in ./frontmatter for acknowledgements, dedications and glossary. Note that [arara tex automation tool](https://github.com/islandoftex/arara) is required for glossary.
 
-Built and tested using Miktex.
+Built and tested using Miktex. For questions feel free to reach out to me on Github.
 
 ## Change log
 * Original version CUEDthesis v1 by Harish Bhanderi, 2002
