@@ -12,8 +12,8 @@ The template consists out of the following components:
 * Sub tex files: introduction.tex, methods.tex, abstract.tex, etc. --> edit your sections here
 * Class file: PhDthesisPSnPDF.cls --> style file describing the template style and layout. You don't usualy need to edit this
 * Macro file: MacroFile1.tex --> defining some frequently used Latex commands such as \figure
-  
-Place your figures in the ./figures folder. You can create additional sections by copying existing ones in the ./sections folder. In general it is better to stick the standard 5 sections structure. Including more frontmatter can be done by uncommenting lines in the main document. There are templates available in ./frontmatter for acknowledgements, dedications and glossary. Please not that [arara tex automation tool](https://github.com/islandoftex/arara) is required for glossary.
+
+Introduction.tex provides examples of references, tables and figures. Figures should be placed in the ./figures folder. Title page logo's in the ./frontmatter. You can create additional sections by copying existing ones from the ./sections folder. However, in general it is better to stick the standard 5 sections structure. Including more frontmatter can be done by uncommenting lines in the main document. There are templates available in ./frontmatter for acknowledgements, dedications and glossary. Note that [arara tex automation tool](https://github.com/islandoftex/arara) is required for glossary.
 
 Built and tested using Miktex.
 
