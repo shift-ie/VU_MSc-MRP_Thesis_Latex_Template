@@ -18,6 +18,6 @@ Place your figures in the ./figures folder. You can create additional sections b
 Built and tested using Miktex.
 
 ## Change log
-Original version CUEDthesis v1 by Harish Bhanderi, 2002
-Iteration PhDthesis version 2 style file by Jakob Suckale, 2007
-Current VU Master Thesis template v1 by G.J. van der Gun, 2023
+* Original version CUEDthesis v1 by Harish Bhanderi, 2002
+* Iteration PhDthesis version 2 style file by Jakob Suckale, 2007
+* Current VU Master Thesis template v1 by G.J. van der Gun, 2023
