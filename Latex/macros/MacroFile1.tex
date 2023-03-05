@@ -1,0 +1,45 @@
+% This file contains macros that can be called up from connected TeX files
+% It helps to summarise repeated code, e.g. figure insertion (see below).
+
+%: ----------------------- FigureMacros ------------------------
+
+% insert a centered figure with caption and description
+% parameters 1:filename, 2:label, 3:description
+\newcommand{\figuremacro}[4]{
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=1\textwidth]{figures/#1}
+		\caption[#3]{#4}
+		\label{fig:#2}
+	\end{figure}
+}
+
+% insert a centered figure with caption and description AND WIDTH
+% parameters 1:filename, 2:label, 3:description, 4: textwidth
+% textwidth 1 means as text, 0.5 means half the width of the text
+\newcommand{\figuremacroW}[5]{
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=#5\textwidth]{figures/#1}
+		\caption[#3]{#4}
+		\label{fig:#2}
+	\end{figure}
+}
+
+% insert a centered multi figure with caption and description
+% parameters 1:filename A, 2:filename B, 3:label, 4:description,
+% textwidth 1 means as text, 0.5 means half the width of the text
+\newcommand{\figuremacroG}[5]{
+	\begin{figure*}[th]
+		\centering
+		\begin{subfigure}[t]{0.28\textwidth}
+			\includegraphics[width=\linewidth]{figures/#1}
+			\caption{}\label{fig:#1}
+		\end{subfigure}
+		\begin{subfigure}[t]{0.28\textwidth}
+			\includegraphics[width=\linewidth]{figures/#2}
+			\caption{}\label{fig:#2}
+		\end{subfigure}
+		\caption[#4]{#5}\label{fig:#3}
+	\end{figure*}
+}
