@@ -52,32 +52,6 @@
 \usepackage[nottoc]{tocbibind} % correct page numbers for bib in TOC, nottoc suppresses an entry for TOC itself
 %\usepackage{nextpage}
 
-%:-------------------------- Glossary/Abbrev./Symbols -----------------------
-
-\usepackage[intoc]{nomencl} % load nomencl extension; include in TOC
-%\nomrefpage % to include page numbers after abbrevations
-\renewcommand{\nomname}{Glossary} % rename nomenclature
-\renewcommand{\nomlabel}[1]{\textbf{#1}} % make abbreviations bold
-\makenomenclature % used to be \makeglossary
-\newcommand{\g}{\footnote{For all abbreviations see the glossary on page \pageref{nom}.}} % type "\g" to refer to glossary
-
-% used to be for sorting into categories:
-%\renewcommand\nomgroup[1]{%
-	%  \ifthenelse{\equal{#1}{A}}{%
-		%   \item[\textbf{Roman Symbols}] }{%             A - Roman
-		%    \ifthenelse{\equal{#1}{G}}{%
-			%     \item[\textbf{Greek Symbols}]}{%             G - Greek
-			%      \ifthenelse{\equal{#1}{R}}{%
-				%        \item[\textbf{Superscripts}]}{%              R - Superscripts
-				%          \ifthenelse{\equal{#1}{S}}{%
-					%           \item[\textbf{Subscripts}]}{{%             S - Subscripts
-						%	    \ifthenelse{\equal{#1}{X}}{%
-							%	     \item[\textbf{Other Symbols}]}{{%    X - Other Symbols
-								%	    \ifthenelse{\equal{#1}{Z}}{%
-									%	     \item[\textbf{Acronyms}]}%              Z - Acronyms
-								%              			{{}}}}}}}}}}
-
-
 %:-------------------------- PDF/PS setup -----------------------
 
 %if you use a macTeX 2008 or later, use the ifpdf package
@@ -383,6 +357,12 @@ hyperfigures
 		\vspace{0.5cm}
 		\begin{quote}}
 		{\end{quote}\end{alwayssingle}}
+
+% redefine main matter command in order to surpress creation of empty page
+\renewcommand\mainmatter{%
+	\clearpage
+	\@mainmattertrue
+	\pagenumbering{arabic}}
 
 
 %:-------------------------- page numbers: roman+arabic -----------------------
