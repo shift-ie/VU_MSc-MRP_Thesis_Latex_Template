@@ -200,36 +200,18 @@
 	% --------------------------------------------------------------
 	%:                  BACK MATTER: appendices, refs,..
 	% --------------------------------------------------------------
-	
 	% the back matter: appendix and references close the thesis
 	
 	%: ----------------------- bibliography ------------------------
 	
-	% The section below defines how references are listed and formatted
-	% The default below is 2 columns, small font, complete author names. Bibliographystyle can be changed accoring to preference.
-	
-	% PhDbiblio-url2 = names small caps, title bold & hyperlinked, link to page 
-	
-	% A single column style is also provided below
-	
-	\chapter*{References} % chapter title in single col format
-	\begin{multicols}{2} 
-	\begin{tiny} % tiny(5) < scriptsize(7) < footnotesize(8) < small (9)
-	\renewcommand{\bibname}{\vspace{-34mm}} % surpress printing of title in bibliography command and remove vertical spacing
-    \bibliographystyle{plain}
+	\bibliographystyle{plain}
 	\bibliography{./thesisbib} % adjust this to fit your BibTex file
-	
-	\end{tiny}
-	\end{multicols}
-	
-	% more standard single column report style biblio
-%	\bibliographystyle{plain}
-%	\renewcommand{\bibname}{References} % changes the header; default: Bibliography
-%	\bibliography{./thesisbib} % adjust this to fit your BibTex file
+	\addcontentsline{toc}{chapter}{References} % writes references to ToC (you may change the name here)
 	
 	%: ----------------------- appendix ------------------------
 	
+	% in alphabetical order
+	\appendix
 	\include{sections/appendix}
-	\pagebreak
 	
 \end{document}
