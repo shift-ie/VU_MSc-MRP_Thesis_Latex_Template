@@ -381,3 +381,31 @@ hyperfigures
 
 {\newpage\renewcommand{\thepage}{\arabic{page}}\setcounter{page}{1}}
 
+%:-------------------------- bibliography -----------------------
+
+% this redefines the bibliography environment to span over two columns
+% comment out if a single column reference list is desired
+\makeatletter
+\renewenvironment{thebibliography}[1]
+{\begin{multicols}{2}[\chapter*{\refname}]%
+		\begin{tiny}
+		\@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
+		\list{\@biblabel{\@arabic\c@enumiv}}%
+		{\settowidth\labelwidth{\@biblabel{#1}}%
+			\leftmargin\labelwidth
+			\advance\leftmargin\labelsep
+			\@openbib@code
+			\usecounter{enumiv}%
+			\let\p@enumiv\@empty
+			\renewcommand\theenumiv{\@arabic\c@enumiv}}%
+		\sloppy
+		\clubpenalty4000
+		\@clubpenalty \clubpenalty
+		\widowpenalty4000%
+		\sfcode`\.\@m}
+	{\def\@noitemerr
+		{\@latex@warning{Empty `thebibliography' environment}}%
+		\endlist
+	\end{tiny}
+\end{multicols}}
+\makeatother
